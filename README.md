@@ -1,6 +1,6 @@
 <div align="center">
   <img src="icon.ico" alt="VRC EZ Translator Logo" width="120" />
-  <h1>🌐 VRC EZ Translator by Meiji</h1>
+  <h1>🌐 VRC DUAL EZ Translator by Meiji</h1>
   <p><b>Real-time Dual-way Translation for VRChat using Faster-Whisper & Gemini 2.5</b></p>
 
   ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
