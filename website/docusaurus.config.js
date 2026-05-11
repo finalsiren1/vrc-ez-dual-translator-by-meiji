@@ -43,38 +43,20 @@ const config = {
   },
 
   presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      }),
-    ],
-  ],
+        [
+          'classic',
+          ({
+            docs: {
+              routeBasePath: '/', // 👈 1. เพิ่มบรรทัดนี้: บังคับให้หน้า Docs กลายเป็นหน้าหลักสุดของเว็บ
+              sidebarPath: './sidebars.js',
+            },
+            blog: false, // 👈 2. แก้เป็น false: ปิดระบบ Blog ถาวร
+            theme: {
+              customCss: './src/css/custom.css',
+            },
+          }),
+        ],
+      ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -85,10 +67,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
+        title: 'SyncVRC',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'SyncVRC Logo',
+          src: 'img/Designer (2).png',
         },
         items: [
           {
@@ -118,19 +100,23 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Community & Support Me',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: '☕ Buy me a Ko-fi',
+                href: 'https://ko-fi.com/meijivrc',
+              },
+              {
+                label: '🧡 Patreon',
+                href: 'https://www.patreon.com/meijino',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/myWuZDgVBp',
               },
               {
                 label: 'X',
-                href: 'https://x.com/docusaurus',
+                href: 'https://x.com/meiji_vrc',
               },
             ],
           },
@@ -138,12 +124,8 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/finalsiren1/SyncVRC',
               },
             ],
           },
