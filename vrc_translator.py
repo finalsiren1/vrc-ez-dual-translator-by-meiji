@@ -417,7 +417,7 @@ rmdir /S /Q "{extract_path}"
                 "err_api_limit": "API Limit Exceeded: Too many requests. Please check your quota or wait a moment.",
                 "err_api_invalid": "API Error: Invalid API Key. Please check your key in Settings.",
                 "err_api_empty": "❌ Please enter your API Key in the Settings tab before starting.",
-                "adv_audio_lbl": "Advanced Audio Settings",
+                "adv_audio_lbl": "⚙️ Advanced Audio Settings",
                 "silence_timeout_lbl": "Silence Timeout (Wait to finish):",
                 "max_record_time_lbl": "Max Recording Time per phrase:",
                 "beam_size_lbl": "AI Accuracy vs Speed (Beam Size):",
