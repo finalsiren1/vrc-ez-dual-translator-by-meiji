@@ -8,15 +8,15 @@
   ![NVIDIA](https://img.shields.io/badge/GPU-NVIDIA%20Required-green.svg)
 
   <b>☕ Buy me a snack to support my work!</b><br>
-  <a href="https://ko-fi.com/meijivrc"><img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi"></a>
-  <a href="https://www.patreon.com/meijino"><img src="https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white" alt="Patreon"></a>
+  <a href="https://ko-fi.com/meijivrc" target="_blank"><img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi"></a>
+  <a href="https://www.patreon.com/meijino" target="_blank"><img src="https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white" alt="Patreon"></a>
   <br><br>
 </div>
 
 ---
 
 <div align="center">
-  <h3>📖 <a href="https://finalsiren1.github.io/SyncVRC/">Official Documentation & Manual</a></h3>
+  <h3>📖 <a href="https://finalsiren1.github.io/SyncVRC/" target="_blank">Official Documentation & Manual</a></h3>
   <p>For Setup Guides, Usage Instructions, and feature deep-dives, please visit our official website.</p>
 </div>
 
@@ -159,5 +159,5 @@ We want you to have the right expectations. SyncVRC is powerful, but not magic:
 ---
 
 <div align="center">
-  <p><i>Created with ❤️ by Meiji ღ</i></p>
+  <p><i>Created by Meiji ღ</i></p>
 </div>
