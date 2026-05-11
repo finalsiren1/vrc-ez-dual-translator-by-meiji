@@ -16,9 +16,8 @@
 ---
 
 <div align="center">
-  <h3>📖 Official Documentation & Manual</h3>
-  <p>For Setup Guides, Usage Instructions, and feature deep-dives, please visit our official website:</p>
-  <a href="https://finalsiren1.github.io/SyncVRC/"><b>👉 https://finalsiren1.github.io/SyncVRC/ 👈</b></a>
+  <h3>📖 <a href="https://finalsiren1.github.io/SyncVRC/">Official Documentation & Manual</a></h3>
+  <p>For Setup Guides, Usage Instructions, and feature deep-dives, please visit our official website.</p>
 </div>
 
 ---
