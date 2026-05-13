@@ -25,6 +25,14 @@ import sentry_sdk
 from google import genai
 from google.genai import types
 
+def resource_path(relative_path):
+    try:
+        # PyInstaller สร้างโฟลเดอร์ Temp และเก็บ path ไว้ใน _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
 # ตั้งค่า Theme เริ่มต้น
 ctk.set_appearance_mode("Light")
 ctk.set_default_color_theme("blue")
@@ -76,8 +84,10 @@ class SyncVRCApp:
         self.app_version = "1.0.0"
         self.root.title(f"SyncVRC - Real-time Voice Translator (v{self.app_version})")
 
-        try: self.root.iconbitmap("icon.ico")
-        except: pass
+        try: 
+            self.root.iconbitmap(resource_path("icon.ico"))
+        except Exception as e: 
+            print(f"Failed to load icon: {e}")
 
         self.config_file = "config.json"
         
@@ -417,7 +427,7 @@ rmdir /S /Q "{extract_path}"
                 "err_api_limit": "API Limit Exceeded: Too many requests. Please check your quota or wait a moment.",
                 "err_api_invalid": "API Error: Invalid API Key. Please check your key in Settings.",
                 "err_api_empty": "❌ Please enter your API Key in the Settings tab before starting.",
-                "adv_audio_lbl": "⚙️ Advanced Audio Settings",
+                "adv_audio_lbl": "Advanced Audio Settings",
                 "silence_timeout_lbl": "Silence Timeout (Wait to finish):",
                 "max_record_time_lbl": "Max Recording Time per phrase:",
                 "beam_size_lbl": "AI Accuracy vs Speed (Beam Size):",
@@ -1563,8 +1573,11 @@ rmdir /S /Q "{extract_path}"
             err_str = str(e).lower()
             if any(k in err_str for k in ["429", "quota", "exhausted", "limit"]):
                 msg = self.get_t("err_api_limit")
-            elif any(k in err_str for k in ["400", "key", "invalid"]):
+            elif "api key not valid" in err_str or "api_key" in err_str:
                 msg = self.get_t("err_api_invalid")
+            elif "400" in err_str or "invalid" in err_str:
+                # ถ้าเป็น 400 เรื่องอื่น ให้พ่น Error จริงออกมา จะได้รู้ว่าพังที่ไหน
+                msg = f"❌ API Request Error: {e}" 
             else:
                 msg = f"❌ Error: {e}"
                 
@@ -1695,8 +1708,11 @@ rmdir /S /Q "{extract_path}"
             err_str = str(e).lower()
             if any(k in err_str for k in ["429", "quota", "exhausted", "limit"]):
                 msg = self.get_t("err_api_limit")
-            elif any(k in err_str for k in ["400", "key", "invalid"]):
+            elif "api key not valid" in err_str or "api_key" in err_str:
                 msg = self.get_t("err_api_invalid")
+            elif "400" in err_str or "invalid" in err_str:
+                # ถ้าเป็น 400 เรื่องอื่น ให้พ่น Error จริงออกมา จะได้รู้ว่าพังที่ไหน
+                msg = f"❌ API Request Error: {e}" 
             else:
                 msg = f"❌ Error: {e}"
                 
