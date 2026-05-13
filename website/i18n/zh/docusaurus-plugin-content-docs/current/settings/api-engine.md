@@ -64,6 +64,17 @@ sidebar_position: 2
 
 ---
 
-## 固定的模型信息
+## Whisper 模型选择
 
-**ℹ️ 关于准确性的注意事项:** 为了在翻译速度和转录准确性之间取得最佳平衡，SyncVRC 硬编码为在本地使用 **Whisper 'Medium'** 模型。这确保 AI 在将文本发送到云端之前准确理解您的发音，并且无法手动更改。
+SyncVRC 允许您选择用于语音识别的离线 Whisper AI 模型的大小。这让您可以根据计算机的硬件功能 (VRAM) 和速度来自定义和平衡转录准确性。
+
+* **模型大小:** 您可以从 **Tiny**（速度最快，准确度最低，占用约 1GB 内存）到 **Large-v3**（速度最慢，准确度最高，需要约 10GB 内存）之间进行选择。默认值为 **Medium**，它为清晰的音频提供了最佳的整体平衡。
+* **自动下载:** 如果您选择了以前未使用的模型大小，SyncVRC 将自动提示您下载所需的文件。
+* **清除缓存 (存储管理):** 下载的 AI 模型会占用硬盘空间。如果您的磁盘空间不足，可以点击 **Clear Cache (清除缓存)** 按钮来安全地删除所有未使用的模型并回收存储空间。*（注意：基础的 'Medium' 模型无法删除。）*
+
+<img 
+  src={require('./img/settings-model.jpg').default} 
+  width="900" 
+  alt="Settings Whisper Model" 
+  style={{ marginTop: '20px', marginBottom: '40px', marginLeft: '30px' }} 
+/>

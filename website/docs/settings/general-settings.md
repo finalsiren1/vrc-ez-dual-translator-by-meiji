@@ -12,7 +12,7 @@ The **General Settings** section allows you to customize the visual appearance, 
 
 This setting changes the language of the entire application interface. 
 
-* **Supported Languages:** English, Japanese (日本語), Chinese (中文), and Korean (한국어).
+* **Supported Languages:** English, Japanese (日本語), Chinese (中文), Korean (한국어), Spanish (Español), Russian (Русский), French (Français), German (Deutsch), Portuguese (Português), and Thai (ไทย).
 * **How it works:** Simply select your preferred language from the dropdown menu. The interface will update instantly without needing a restart, and your preference will be saved automatically for future sessions.
 
 <img 

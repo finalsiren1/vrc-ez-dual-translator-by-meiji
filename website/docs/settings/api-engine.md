@@ -63,6 +63,17 @@ This setting determines which hardware component on your computer runs the offli
 
 ---
 
-## Fixed Model Information
+## Whisper Model Selection
 
-**ℹ️ Note on Accuracy:** For the best balance between translation speed and transcription accuracy, SyncVRC is hardcoded to use the **Whisper 'Medium'** model locally. This ensures the AI accurately understands your pronunciation before sending the text to the cloud, and cannot be changed manually.
+SyncVRC allows you to choose the size of the offline Whisper AI model used for speech recognition. This lets you customize and balance transcription accuracy with your computer's hardware capabilities (VRAM) and speed.
+
+* **Model Sizes:** You can choose from **Tiny** (fastest, lowest accuracy, uses ~1GB RAM) up to **Large-v3** (slowest, highest accuracy, requires ~10GB RAM). The default is **Medium**, which offers the best overall balance for clear audio.
+* **Automatic Downloading:** If you select a model size that hasn't been used before, SyncVRC will automatically prompt you to download the necessary files. 
+* **Clear Cache (Storage Management):** Downloaded AI models consume hard drive space. If your disk is getting full, you can click the **Clear Cache** button to safely delete all unused models and reclaim storage space. *(Note: The base 'Medium' model cannot be deleted.)*
+
+<img 
+  src={require('./img/settings-model.jpg').default} 
+  width="900" 
+  alt="Settings Whisper Model" 
+  style={{ marginTop: '20px', marginBottom: '40px', marginLeft: '30px' }} 
+/>
